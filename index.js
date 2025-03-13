@@ -2,6 +2,7 @@ const express =require("express");
 const connectToDb = require("./config/mongo.config");
 const app=express();
 const todoRouter=require("./routes/todo.route")
+require("dotenv").config()
 app.use(express.json());
 
 app.use("/todo",todoRouter)
